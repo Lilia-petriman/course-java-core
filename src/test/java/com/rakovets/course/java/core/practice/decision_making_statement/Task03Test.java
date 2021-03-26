@@ -14,6 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 @DisplayName("Color HP")
 class Task03Test {
+    @org.jetbrains.annotations.NotNull
     static Stream<Arguments> provideArguments() {
         return Stream.of(
                 Arguments.of(0, 346, null),

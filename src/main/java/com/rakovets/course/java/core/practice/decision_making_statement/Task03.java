@@ -32,11 +32,21 @@ class Task03 {
      *
      * @param currentHealthPoint текущее количество HP игрока
      * @param maxHealthPoint     максимальное количество HP игрока
-     * @return null/'RED'/'ORANGE'/'YELLOW'/'GREEN'
      */
     static String getColorHealthPoint(int currentHealthPoint, int maxHealthPoint) {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
-        return null;
+        String color1 = "красный";
+        String color2 = "оранжевый";
+        String color3 = "желтый";
+        String color4 = "зеленый";
+        if (currentHealthPoint<25) {
+            return color1;
+        }else if(currentHealthPoint<50){
+            return color2;
+        }else if (currentHealthPoint<75){
+            return color3;
+        }else return color4;
+
     }
 }

@@ -20,6 +20,7 @@ class Task04 {
 
         String nameWeekday = getDayOfWeekNumber(dayOfWeekNumber);
         System.out.printf("Result: %s", nameWeekday);
+
     }
 
     /**
@@ -28,9 +29,12 @@ class Task04 {
      * @param dayOfWeekNumber номер дня недели
      * @return день недели на английском языке (UPPER CASE)
      */
+
     static String getDayOfWeekNumber(byte dayOfWeekNumber) {
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используя параметры метода
-        return null;
+
+        if(dayOfWeekNumber==1){
+
+        }
+       return dayOfWeekNamber;
     }
 }
