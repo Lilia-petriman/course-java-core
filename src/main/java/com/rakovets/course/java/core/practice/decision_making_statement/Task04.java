@@ -31,29 +31,29 @@ class Task04 {
      */
 
     static String getDayOfWeekNumber(byte dayOfWeekNumber) {
-        String dayOfWeekName1 ="MONDAY";
-        String dayOfWeekName2 ="TUESDAY";
-        String dayOfWeekName3 ="WEDNESDAY";
-        String dayOfWeekName4 ="THURSDAY";
-        String dayOfWeekName5 ="FRIDAY";
-        String dayOfWeekName6 ="SATURDAY";
-        String dayOfWeekName7 ="SUNDAY";
+        String dayOfWeekName1 = "MONDAY";
+        String dayOfWeekName2 = "TUESDAY";
+        String dayOfWeekName3 = "WEDNESDAY";
+        String dayOfWeekName4 = "THURSDAY";
+        String dayOfWeekName5 = "FRIDAY";
+        String dayOfWeekName6 = "SATURDAY";
+        String dayOfWeekName7 = "SUNDAY";
 
 
-        if(dayOfWeekNumber==1){
+        if (dayOfWeekNumber == 1) {
             return dayOfWeekName1;
-        }else if (dayOfWeekNumber == 2){
+        } else if (dayOfWeekNumber == 2) {
             return dayOfWeekName2;
-        }else if (dayOfWeekNumber ==3){
+        } else if (dayOfWeekNumber == 3) {
             return dayOfWeekName3;
-        }else if (dayOfWeekNumber ==4){
+        } else if (dayOfWeekNumber == 4) {
             return dayOfWeekName4;
-        }else if (dayOfWeekNumber ==5){
+        } else if (dayOfWeekNumber == 5) {
             return dayOfWeekName5;
-        }else if (dayOfWeekNumber ==6){
-            return dayOfWeekName6;
-        }else(dayOfWeekNumber == 7){
+        } else if (dayOfWeekNumber == 7) {
             return dayOfWeekName7;
         }
+        else return null;
     }
 }
+
