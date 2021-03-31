@@ -50,6 +50,8 @@ class Task04 {
             return dayOfWeekName4;
         } else if (dayOfWeekNumber == 5) {
             return dayOfWeekName5;
+        } else if (dayOfWeekNumber == 6) {
+            return dayOfWeekName6;
         } else if (dayOfWeekNumber == 7) {
             return dayOfWeekName7;
         }

@@ -31,8 +31,35 @@ class Task05 {
      * @return месяц на английском языке (UPPER CASE)
      */
     static String getMonthName(byte monthNumber) {
+        String Month;
+        if( monthNumber == 1 ){
+            Month = "JANUARY";
+        } else if ( monthNumber == 2 ){
+            Month = "FEBRUARY";
+        } else if (monthNumber == 3){
+            Month = "MARCH";
+        } else if (monthNumber == 4){
+            Month = "APRIL";
+        } else if (monthNumber == 5){
+            Month = "MAY";
+        }else if (monthNumber == 6){
+            Month = "JUNE";
+        }else if (monthNumber == 7){
+            Month = "JULY";
+        }else if (monthNumber == 8){
+            Month = "AUGUST";
+        }else if (monthNumber == 9){
+            Month = "SEPTEMBER";
+        }else if (monthNumber == 10){
+            Month = "OCTOBER";
+        }else if (monthNumber == 11){
+            Month = "NOVEMBER";
+        }else if (monthNumber == 12){
+            Month = "DECEMBER";
+        }else  Month = null;
+        return  Month;
+
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
-        return null;
     }
 }
