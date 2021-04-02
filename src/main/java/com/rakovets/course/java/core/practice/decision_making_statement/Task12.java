@@ -1,5 +1,7 @@
 package com.rakovets.course.java.core.practice.decision_making_statement;
 
+import java.util.zip.ZipEntry;
+
 /**
  * Разработать программу для сайта посвященного астрологии.
  * <p>
@@ -47,6 +49,30 @@ class Task12 {
     static String getZodiacSign(int day, int month, int year) {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
-        return null;
+        String Zodiac;
+        if (day >= 21 & month == 4 | day <= 20 & month == 5) {
+            Zodiac = "Bull";
+        } else if (day >= 21 & month == 5 | day <= 21 & month == 6) {
+            Zodiac = "Twins";
+        } else if (day >= 21 & month == 3 | day <= 20 & month == 4) {
+            Zodiac = "Ram";
+        } else if (day >= 22 & month == 6 | day <= 22 & month == 7) {
+            Zodiac = "Crab";
+        } else if (day >= 23 & month == 7 | day <= 22 & month == 8) {
+            Zodiac = "Lion";
+        } else if (day >= 23 & month == 8 | day <= 21 & month == 9) {
+            Zodiac = "Maiden";
+        } else if (day >= 22 & month == 9 | day <= 22 & month == 10) {
+            Zodiac = "Scales";
+        } else if (day >= 23 & month == 10 | day <= 22 & month == 11) {
+            Zodiac = "Scorpion";
+        } else if (day >= 23 & month == 11 | day <= 21 & month == 12) {
+            Zodiac = "Archer";
+        } else if (day >= 22 & month == 12 | day <= 20 & month == 1) {
+            Zodiac = "Goat";
+        } else if (day >= 21 & month == 1 | day <= 19 & month == 2) {
+            Zodiac = "Water-bearer";
+        } else Zodiac = "Fish";
+        return Zodiac;
     }
 }

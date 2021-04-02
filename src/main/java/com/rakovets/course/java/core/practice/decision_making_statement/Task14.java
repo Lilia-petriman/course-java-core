@@ -49,7 +49,7 @@ class Task14 {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
         int chinesCalendar = year % 12;
-        String myYear;
+        String myYear = null;
         switch (chinesCalendar) {
             case  0 :
                 myYear = "Monkey";
@@ -75,6 +75,7 @@ class Task14 {
             case  7 :
                 myYear = "Rabbit";
                 break;
+         
             case  8 :
                 myYear = "Dragon";
                 break;
@@ -87,7 +88,6 @@ class Task14 {
             case  11 :
                 myYear = "Ram";
                 break;
-            default : myYear = null;
         }
         return myYear;
     }
