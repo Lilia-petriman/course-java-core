@@ -29,25 +29,66 @@ class Task14 {
         //FIXME
         // Ниже приведены значения присваиваемые переменным. Их можно изменять для проверки различных вариантов входных
         // аргументов. Типы данных изменять нельзя
-        int day = 12;
-        int month = 12;
+        //int day = 12;
+        //int month = 12;
         int year = 1989;
 
-        String monthName = getZodiacYearName(day, month, year);
-        System.out.printf("Result: %s", monthName);
+        String monthName = getZodiacYearName (year);
+        System.out.printf("Result: %s", year);
     }
 
     /**
      * Определяет названия года по китайскому календарю.
      *
-     * @param day   число дня рождения
-     * @param month месяц дня рождения
+     //* @param day   число дня рождения
+     //* @param month месяц дня рождения
      * @param year  год дня рождения (больше 0 г. н.э.)
      * @return название года по китайскому календарю
      */
-    static String getZodiacYearName(int day, int month, int year) {
+    static String getZodiacYearName(int year) {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
-        return null;
+        int chinesCalendar = year % 12;
+        String myYear;
+        switch (chinesCalendar) {
+            case  0 :
+                myYear = "Monkey";
+                break;
+            case  1 :
+                myYear = "Rooster";
+                break;
+            case  2 :
+                myYear = "Dog";
+                break;
+            case  3 :
+                myYear = "Pig";
+                break;
+            case  4 :
+                myYear = "Rat";
+                break;
+            case  5 :
+                myYear = "Ox";
+                break;
+            case  6 :
+                myYear = "Tiger";
+                break;
+            case  7 :
+                myYear = "Rabbit";
+                break;
+            case  8 :
+                myYear = "Dragon";
+                break;
+            case  9 :
+                myYear = "Snake";
+                break;
+            case  10 :
+                myYear = "Horse";
+                break;
+            case  11 :
+                myYear = "Ram";
+                break;
+            default : myYear = null;
+        }
+        return myYear;
     }
 }

@@ -45,7 +45,7 @@ class Task14Test {
     @ParameterizedTest(name = "Birthday: {0}")
     @MethodSource("provideArguments")
     void test(int day, int month, int year, String expected) {
-        String actual = Task14.getZodiacYearName(day, month, year);
+        String actual = Task14.getZodiacYearName(year);
 
         assertEquals(expected, actual);
     }
