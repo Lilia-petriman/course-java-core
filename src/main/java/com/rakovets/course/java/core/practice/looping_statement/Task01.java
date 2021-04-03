@@ -31,9 +31,9 @@ class Task01 {
     static String generateNumbersColumn(int numberRows) {
         String result = "";
 
-        for (int i = 1; i < numberRows ; i++) {
+        for (int i = 1; i <= numberRows ; i++) {
             result += i + "\n";
         }
-        return result + numberRows;
+        return result;
     }
 }
