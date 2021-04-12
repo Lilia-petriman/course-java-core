@@ -23,6 +23,7 @@ class Task03 {
         System.out.printf("Result: %f", totalDepositAmount);
     }
 
+
     /**
      * Рассчитывает прибыль, которую получит клиент по вкладу с ежегодным перерасчетом (сложный процент).
      *
@@ -34,6 +35,13 @@ class Task03 {
     static double getTotalDepositAmount(double depositAmount, double annualDepositPercent, int depositTerm) {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
-        return 0.0;
+        double income = 0;
+        for (int i = 1; i < depositTerm; i++) {
+           double AddIncome = annualDepositPercent * depositAmount /100;
+           income +=AddIncome;
+            depositAmount +=AddIncome;
+
+        }
+        return income;
     }
 }
