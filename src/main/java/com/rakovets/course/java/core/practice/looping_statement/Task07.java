@@ -38,7 +38,20 @@ class Task07 {
     static double calculateTotalDistance(int startDistance, int finishDistance, double dailyProgressAsPercentage) {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
-        double totalDistance = 0;
-        return BigDecimal.valueOf(totalDistance).setScale(2, RoundingMode.HALF_UP).doubleValue();
+        double distance = 0.0;
+        double start = (double) startDistance;
+        double end = (double) finishDistance;
+        if (start > 0) {
+            while (start <= end) {
+                start = start + start * dailyProgressAsPercentage / 100;
+                distance += start;
+            }
+            return BigDecimal.valueOf(distance).setScale(2, RoundingMode.HALF_DOWN).doubleValue();
+        } else {
+            distance = 0.0;
+            return distance;
+        }
+
     }
 }
+//Корректно ли сделано приведение***

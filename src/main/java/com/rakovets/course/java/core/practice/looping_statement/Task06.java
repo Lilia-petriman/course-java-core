@@ -22,6 +22,7 @@ class Task06 {
         // аргументов. Типы данных изменять нельзя
         long amount = 1500;
 
+
         String amountWithAccountingFormat = convertToAccountingFormat(amount);
         System.out.printf("Result: %s", amountWithAccountingFormat);
     }
@@ -36,6 +37,24 @@ class Task06 {
     static String convertToAccountingFormat(long amount) {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
-        return null;
+        long remainAmount;
+        int divider = 1000;
+        String result = "";
+        String space = " ";
+        if (amount > 0) {
+            while (amount >= divider) {
+                remainAmount = amount % divider;
+                amount = (amount - remainAmount) / divider;
+                result += space + remainAmount + result;
+            }
+            return  amount + space + result;
+        } else {
+            while (-amount >= divider) {
+                remainAmount = -amount % divider;
+                amount = ((-amount) - remainAmount) / divider;
+                result += space + remainAmount + result;
+            }
+            return amount + space + result;
+        }
     }
 }

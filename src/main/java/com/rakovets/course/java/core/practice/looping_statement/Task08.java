@@ -14,7 +14,7 @@ package com.rakovets.course.java.core.practice.looping_statement;
  *
  * @author Dmitry Rakovets
  */
-class Task08 {
+class  Task08 {
     /**
      * The entry point of the task
      *
