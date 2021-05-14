@@ -48,14 +48,14 @@ class  Task08 {
     static String generateTotalPriceList(int startNumberItems, double startPriceAllItems, int differentialNumberItems, int sizeTotalPrice) {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
-        double costOneItem =  (startPriceAllItems / startNumberItems);
+        double costOneItem = startPriceAllItems / startNumberItems;
         String result = "";
-        for (int i = 0; i < sizeTotalPrice; i++) {
-            startNumberItems +=differentialNumberItems;
-            startPriceAllItems += BigDecimal.valueOf(differentialNumberItems * costOneItem).setScale(2, RoundingMode.HALF_UP).doubleValue();
-            result += startNumberItems + " - " + startPriceAllItems + " ";
-
+        for (int i = 0; i < sizeTotalPrice - 1; i++) {
+            result += startNumberItems + " - " + BigDecimal.valueOf(startPriceAllItems).setScale(2, RoundingMode.HALF_UP).doubleValue() + "\n";
+            startNumberItems += differentialNumberItems;
+            startPriceAllItems += differentialNumberItems * costOneItem;
         }
-        return result;
+        result = result + startNumberItems + " - " + BigDecimal.valueOf(startPriceAllItems).setScale(2, RoundingMode.HALF_UP).doubleValue();
+        return  result;
     }
 }
