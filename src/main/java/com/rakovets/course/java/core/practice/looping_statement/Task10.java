@@ -5,7 +5,7 @@ package com.rakovets.course.java.core.practice.looping_statement;
  *
  * <ul>
  *     <li>Число называется простым, если оно делится на цело (без остатка) ТОЛЬКО на 1 и на себя.</li>
- *     <li>1 не является простым числом</li>
+ *     <li>1 н.е является простым числом</li>
  * </ul>
  * <p>
  * * Программа должна работать максимально эффективно, т.е. количество команд выполняемых CPU должно быть минимально
@@ -23,8 +23,8 @@ class Task10 {
         //FIXME
         // Ниже приведены значения присваиваемые переменным. Их можно изменять для проверки различных вариантов входных
         // аргументов. Типы данных изменять нельзя
-        int startNumber = 0;
-        int finishNumber = 50;
+        int startNumber = 1;
+        int finishNumber = 1;
 
         int countPrimeNumber = countPrimeNumber(startNumber, finishNumber);
         System.out.printf("Result:\n%d", countPrimeNumber);
@@ -40,6 +40,18 @@ class Task10 {
     static int countPrimeNumber(int startNumber, int finishNumber) {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
-        return 0;
+        int totalNumber = finishNumber - startNumber + 1;
+        int countNotPrimeNumber = 0;
+        for (int i = startNumber; i < finishNumber; i ++){
+            for (int j = 2; j < i ; j++) {
+                if (i != 2 || i % j == 0){
+
+                     countNotPrimeNumber ++;
+                    break;
+                }
+            }
+        }
+        int countPrimeNumber = totalNumber - countNotPrimeNumber;
+        return countPrimeNumber;
     }
 }

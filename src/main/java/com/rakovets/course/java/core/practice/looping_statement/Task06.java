@@ -20,7 +20,7 @@ class Task06 {
         //FIXME
         // Ниже приведены значения присваиваемые переменным. Их можно изменять для проверки различных вариантов входных
         // аргументов. Типы данных изменять нельзя
-        long amount = 1500;
+        long amount = 1234567890;
 
 
         String amountWithAccountingFormat = convertToAccountingFormat(amount);
@@ -41,20 +41,36 @@ class Task06 {
         int divider = 1000;
         String result = "";
         String space = " ";
-        if (amount > 0) {
+        //Повторяющийся код - Вариант 1
+        /*if (amount > 0) {
             while (amount >= divider) {
                 remainAmount = amount % divider;
                 amount = (amount - remainAmount) / divider;
-                result += space + remainAmount + result;
+                result = space + remainAmount + result;
             }
-            return  amount + space + result;
+            return  amount  + result;
         } else {
             while (-amount >= divider) {
-                remainAmount = -amount % divider;
-                amount = ((-amount) - remainAmount) / divider;
-                result += space + remainAmount + result;
+                remainAmount = - amount % divider;
+                amount = (amount + remainAmount) / divider;
+                result = space + remainAmount + result;
             }
-            return amount + space + result;
+            return amount + result;
+        }*/
+        // Вариант 2
+        long amountModule = Math.abs(amount);
+        while (amountModule >= divider) {
+            remainAmount = amountModule % divider;
+            amountModule = (amountModule - remainAmount) / divider;
+            result = space + remainAmount + result;
+        }
+        if (amount >= 0) {
+            return amountModule + result;
+        } else {
+            result = "-" + amountModule + result;
+            return result;
         }
     }
 }
+
+

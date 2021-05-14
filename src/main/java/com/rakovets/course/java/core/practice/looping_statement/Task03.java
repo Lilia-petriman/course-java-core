@@ -1,5 +1,8 @@
 package com.rakovets.course.java.core.practice.looping_statement;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 /**
  * Разработать программу для банка.
  *
@@ -15,12 +18,12 @@ class Task03 {
         //FIXME
         // Ниже приведены значения присваиваемые переменным. Их можно изменять для проверки различных вариантов входных
         // аргументов. Типы данных изменять нельзя
-        double depositAmount = 1500.0;
-        double annualDepositPercent = 7.0;
+        double depositAmount = 10000.0;
+        double annualDepositPercent = 18.0;
         int depositTerm = 5;
 
         double totalDepositAmount = getTotalDepositAmount(depositAmount, annualDepositPercent, depositTerm);
-        System.out.printf("Result: %f", totalDepositAmount);
+        System.out.printf("Result: %.2f", totalDepositAmount);
     }
 
 
@@ -35,13 +38,12 @@ class Task03 {
     static double getTotalDepositAmount(double depositAmount, double annualDepositPercent, int depositTerm) {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
-        double income = 0;
-        for (int i = 1; i < depositTerm; i++) {
-           double AddIncome = annualDepositPercent * depositAmount /100;
-           income +=AddIncome;
-            depositAmount +=AddIncome;
-
+        double allIncome = depositAmount;
+        for (int i = 1; i <= depositTerm; i++) {
+           double income = depositAmount * annualDepositPercent /100;
+           allIncome += income;
+           depositAmount += income;
         }
-        return income;
+        return BigDecimal.valueOf(allIncome).setScale(2, RoundingMode.HALF_UP).doubleValue();
     }
 }
