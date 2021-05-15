@@ -35,17 +35,16 @@ class Task01 {
      * @return средняя арифметическая отметка
      */
     static double getAverageMark(int[] marks) {
-        double sum = 0;
-        double average;
-
-        for (int mark : marks) {
-            sum += mark;
+        int sum = 0;
+        int quantity = marks.length;
+        for (int k : marks) {
+            sum +=k;
         }
-        average = sum / marks.length;
-        return BigDecimal.valueOf(average).setScale(2, RoundingMode.HALF_UP).doubleValue();
+        long averageMark = sum / quantity;
+        return BigDecimal.valueOf(averageMark).setScale(2,RoundingMode.HALF_UP).doubleValue();
     }
 
-    /**
+    /**i
      * Возвращает минимальную отметку.
      *
      * @param marks отметки
@@ -53,10 +52,9 @@ class Task01 {
      */
     static int getMinMark(int[] marks) {
         int min = marks[0];
-
-        for (int num : marks) {
-            if (num < min) {
-                min = num;
+        for (int i:marks) {
+            if (i < min) {
+                min = i;
             }
         }
         return min;
@@ -70,10 +68,9 @@ class Task01 {
      */
     static int getMaxMark(int[] marks) {
         int max = marks[0];
-
-        for (int num : marks) {
-            if (num > max) {
-                max = num;
+        for (int i:marks) {
+            if (i > max) {
+                max = i;
             }
         }
         return max;
