@@ -8,5 +8,7 @@ public class Example2SimpleClass {
         dmitry.name = "Dmitry";
         dmitry.age = 21;
         dmitry.tellAboutYourself();
+
+
     }
 }
